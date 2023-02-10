@@ -1,6 +1,6 @@
 <nav class="navbar bg-base-300">
     <div class="flex-1">
-        <a href="{{ route('dashboard') }}" class="btn btn-ghost no-animation normal-case text-xl">Maybe CMS</a>
+        <a href="{{ route('user.dashboard') }}" class="btn btn-ghost no-animation normal-case text-xl">Maybe CMS</a>
     </div>
     <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
@@ -15,9 +15,9 @@
                 <ul class="p-2 bg-base-200 w-full">
                     <li><a>Profile</a></li>
                     <li onclick="document.getElementById('logout-form').submit();">
-                        <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                        <form action="{{ route('user.logout') }}" method="POST" id="logout-form">
                             @csrf
-                            <a href="#">Logout</a>
+                            <a>Logout</a>
                         </form>
                     </li>
                 </ul>

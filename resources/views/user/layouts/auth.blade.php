@@ -26,7 +26,7 @@
                 @include('user.layouts.sidebar')
             </div>
             <div class="w-10/12 p-2">
-                <h1 class="text-2xl font-semibold">{{ $pageTitle ?? "Page Title" }}</h1>
+                <h1 class="text-2xl font-semibold">{{ $pageTitle ?? 'Page Title' }}</h1>
                 @yield('content')
             </div>
         </div>
