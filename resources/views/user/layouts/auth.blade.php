@@ -13,6 +13,8 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @notifyCss
+    <link rel="stylesheet" href="{{ asset('assets/js/jquery-ui/jquery-ui.min.css') }}">
     @stack('css')
 </head>
 
@@ -21,6 +23,7 @@
     @include('user.layouts.navbar')
     {{-- main/content --}}
     <main>
+        <x:notify-messages />
         <div class="flex w-full gap-x-2">
             <div class="p-2 w-2/12 h-screen overflow-y-auto bg-base-200">
                 @include('user.layouts.sidebar')
@@ -32,6 +35,19 @@
         </div>
     </main>
 
+    @notifyJs
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-ui/jquery-ui.min.js') }}"></script>
+    {{-- <script>
+        let submits = document.querySelector("input[type=submit], button[type=submit]");
+        if (submits) {
+            submits.addEventListener("click",
+                function() {
+                    this.classList.add("loading");
+                });
+        }
+    </script> --}}
     @stack('js')
 </body>
 

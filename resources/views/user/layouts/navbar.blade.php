@@ -13,7 +13,7 @@
                     </svg>
                 </a>
                 <ul class="p-2 bg-base-200 w-full">
-                    <li><a>Profile</a></li>
+                    <li><a href="{{ route('user.profile.edit') }}">Profile</a></li>
                     <li onclick="document.getElementById('logout-form').submit();">
                         <form action="{{ route('user.logout') }}" method="POST" id="logout-form">
                             @csrf

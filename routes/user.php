@@ -40,7 +40,9 @@ Route::as('user.')->group(function () {
     Route::middleware('auth')->group(function () {
 
         Route::get('/dashboard', function () {
-            return view('dashboard');
+            return view('dashboard',[
+                'pageTitle' => 'User Dashboard'
+            ]);
         })->middleware(['auth', 'verified'])->name('dashboard');
 
         Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
