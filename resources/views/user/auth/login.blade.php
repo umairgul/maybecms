@@ -20,6 +20,9 @@
                         <label class="label text-error">{{ $message }}</label>
                     @enderror
                 </div>
+                <div class="form-control items-end">
+                    <a href="{{ route('user.password.request') }}" class="btn btn-link">Forget Password</a>
+                </div>
                 <div>
                     <button type="submit" class="btn">Login</button>
                 </div>
